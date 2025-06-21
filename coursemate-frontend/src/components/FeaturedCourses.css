@@ -1,0 +1,155 @@
+.featured-courses {
+    padding: 3rem 1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .featured-courses h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+  }
+  /* Add this to your dark mode CSS */
+/* filepath: c:\Users\Hasas\Downloads\10th Batch-CourseMate The Learning and Placement Material Companion\CourseMate source code\coursemate-frontend\src\components\FeaturedCourses.css */
+body.dark-mode {
+  --primary-color: #2196f3; /* or any blue shade you prefer */
+}
+  
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .course-card {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .course-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: var(--primary-color);
+  }
+  
+  .course-card p {
+    margin-bottom: 1.5rem;
+    color: var(--dark-gray);
+    flex-grow: 1;
+  }
+  
+  .view-all {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  
+  .view-all a {
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  
+  /* src/pages/Courses.css */
+  .courses-page {
+    margin-bottom: 3rem;
+  }
+  
+  .courses-header {
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .courses-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .courses-header p {
+    color: var(--dark-gray);
+    font-size: 1.1rem;
+  }
+  
+  .courses-filter {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+  }
+  
+  .category-filter {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .category-filter h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .category-list li {
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    margin-bottom: 0.3rem;
+  }
+  
+  .category-list li:hover {
+    background-color: var(--light-gray);
+  }
+  
+  .category-list li.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+    font-weight: 500;
+  }
+  
+  .no-courses {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    color: var(--dark-gray);
+    font-size: 1.1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .courses-filter {
+      grid-template-columns: 1fr;
+    }
+    
+    .category-filter {
+      margin-bottom: 1rem;
+    }
+    
+    .category-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .category-list li {
+      padding: 0.5rem 0.8rem;
+      margin-bottom: 0;
+    }
+  }

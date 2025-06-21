@@ -1,0 +1,100 @@
+.about-page {
+    margin-bottom: 3rem;
+  }
+  .about-banner {
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .about-header {
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .about-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+  }
+  
+  .about-header p {
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+  }
+  
+  .about-section {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .about-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+  
+  .team-section {
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    
+  }
+  
+  .team-section h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    
+    
+  }
+  
+  .team-member {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    color:white
+  }
+  
+  .team-member h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .team-member p {
+    color: var(--white);
+  }
+  
+  
+/* Default Light Mode */
+.special-thanks {
+  padding: 20px;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: var(--border-radius);
+  border: 5px solid transparent;
+}
+/* 🔹 Dark Mode Styling */
+[data-theme="dark"] .special-thanks {
+  background-color: transparent; /* Transparent background */
+  color: white; /* White text */
+  border: 2px solid white; /* White outline */
+  text-align: center;
+  padding:20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}

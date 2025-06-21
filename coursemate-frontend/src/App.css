@@ -1,0 +1,220 @@
+:root {
+    --primary-color: #4a6baf;
+    --primary-dark: #3a558b;
+    --secondary-color: #ffa62b;
+    --secondary-dark: #e5941c;
+    --text-color: #333;
+    --light-gray: #f9f9f9;
+    --medium-gray: #e5e5e5;
+    --dark-gray: #666;
+    --white: #ffffff;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-gray);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary {
+    background-color: var(--secondary-color);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--secondary-dark);
+  }
+  
+  .btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+  }
+  
+  .btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+  }
+  
+  .btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .btn.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+  }
+  
+  .error {
+    text-align: center;
+    padding: 2rem;
+    color: #d9534f;
+    font-size: 1.2rem;
+  }
+  
+  
+  .link-arrow::after {
+    content: ' →';
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .link-arrow:hover::after {
+    transform: translateX(5px);
+  }
+
+/* Dark Mode */
+/*[data-theme="dark"] {
+  --primary-color: #5aacef;
+  --primary-dark: #42a5f5;
+  --background-color: #121212;
+  --text-color: --primary-dark;
+}*/
+
+/* Apply to the entire page */
+/*body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}*/
+ /* 🔹 Dark Mode */
+[data-theme="dark"] {
+  --primary-color: white;
+  --primary-dark: transparent;
+  --secondary-color: #ffcc80;
+  --secondary-dark: #ffa726;
+  --text-color: #ffffff;
+  --light-gray: transparent;
+  --medium-gray: transparent;
+  --dark-gray: white;
+  --white: transparent;
+  --box-shadow: 0 4px 6px rgb(237, 224, 224);
+  
+  /* Apply Animated Gradient */
+ background: linear-gradient(45deg, #04619F, #000000, #090947, #A55C1B);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+}
+
+/* 🔹 Gradient Animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 60%; }
+}
+/* 🔹 Dark Mode Override */
+[data-theme="dark"] .team-member {
+  background-color: transparent; /* Transparent background in dark mode */
+  color: var(--text-color); /* Ensure text remains visible */
+  border: 2px solid var(--text-color); /* White outline in dark mode */
+}
+
+
+/* Ensure text inside remains visible */
+[data-theme="dark"] .team-member p {
+  color: var(--text-color);
+}
+/* 🔹 Dark Mode Override */
+[data-theme="dark"] .hero-section {
+  background: transparent; /* Remove background in dark mode */
+  color: white; /* Ensure text is clearly visible */
+  border: 2px solid var(--text-color); /* Optional: Add an outline for better visibility */
+}
+/* 🔹 Dark Mode Override */
+[data-theme="dark"] .hero-content {
+  color: white; /* Ensure text remains white in dark mode */
+}
+/* 🔹 Dark Mode Override */
+[data-theme="dark"] .footer {
+  background-color: transparent; /* Make background transparent */
+  color: white; /* Ensure text remains visible */
+  border-top: 1px solid white; /* Optional: Add a subtle top border for visibility */
+}
+/* 🔹 Dark Mode Overrides */
+[data-theme="dark"] .btn-primary,
+[data-theme="dark"] .btn-secondary {
+    background-color: transparent; /* Make it transparent */
+    color: white; /* Ensure text is visible */
+    border: 2px solid white; /* White outline */
+}
+
+[data-theme="dark"] .btn-primary:hover,
+[data-theme="dark"] .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight white tint on hover */
+}
+
+/* 🔹 Dark Mode Overrides */
+[data-theme="dark"] .signup-btn {
+  background-color: transparent; /* Transparent background */
+  color: white; /* White text */
+  border: 2px solid white; /* White outline */
+}
+
+[data-theme="dark"] .signup-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+}
+/* 🔹 Ensure Full-Screen Background */
+body {
+  height: 200vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  transition: background 0.5s ease, color 0.3s ease;
+}
